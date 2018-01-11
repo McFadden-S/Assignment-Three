@@ -151,13 +151,12 @@
         public String toString (){
             String info = ""; //holds all info
             
-            //adds spacer/line
-            info += ("\n**********************************\n");
+            
             //table info
-            info += (id + "\t" + hours + "\t" + wage + "\t" + 
-                    formatter.format(this.returnRegPay()) + "\t" +
-                    formatter.format(this.returnOTPay()) + "\t" +
-                    formatter.format(this.returnGrossPay()));
+            info += (id + "\t\t" + hours + "\t\t" + wage + "\t\t" + 
+                    formatter.format(this.returnRegPay()) + "\t\t" +
+                    formatter.format(this.returnOTPay()) + "\t\t" +
+                    formatter.format(this.returnGrossPay()) + "\n");
             
             
             /*
