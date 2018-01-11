@@ -23,7 +23,7 @@
  	
         private int id;       // Skater id number
         private int hours;    //varible for hours worked
-        private int wage;     //variable for wage (hourly wage)
+        private double wage;     //variable for wage (hourly wage)
         
         //formats numbers to stop at two decimals
         private DecimalFormat formatter = new DecimalFormat("#0.00"); 
@@ -39,7 +39,7 @@
          *     in:         Hours Worked (int) and wage (double)
          *     out:        none
          ********************************************************/     
-        public Employee(int h, int w){
+        public Employee(int h, double w){
             id = nextId++;     // set id and increment for next instance 
             
             hours = h;      //assigns hours worked to appropriate variable
@@ -50,7 +50,7 @@
  	// ********** accessors **********
  	
         /********************************************************
-        * Purpose:        returns employee data
+        * Purpose:        returns employee id
         *         
         * Interface:
         *     in:         None
@@ -59,6 +59,28 @@
         public int returnEmployeeID (){ 
             return (id); //returns id
         } // end returnEmployeeID
+        
+        /********************************************************
+        * Purpose:        returns hours worked
+        *         
+        * Interface:
+        *     in:         None
+        *     out:        hours (int)
+        ********************************************************/
+        public int returnHours (){ 
+            return (hours); //returns id
+        } // end returnHours
+        
+        /********************************************************
+        * Purpose:        returns wage
+        *         
+        * Interface:
+        *     in:         None
+        *     out:        wage (double)
+        ********************************************************/
+        public double returnWage (){ 
+            return (wage); //returns id
+        } // end returnWage
         
         /********************************************************
         * Purpose:        Calculates and returns regular pay
@@ -132,7 +154,7 @@
             //adds spacer/line
             info += ("\n**********************************\n");
             //adds the id
-            info += ("Employee Id: " + this.returnEmployeeID() + "\n");
+            info += ("Employee Id: " + id + "\n");
             //adds hours worked
             info += ("Hours Worked: " + hours + "\n");
             //adds wage
