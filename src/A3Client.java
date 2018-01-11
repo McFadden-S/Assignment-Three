@@ -76,11 +76,14 @@ public class A3Client
         while (strin != null){ //start of EoF loop
             tokens = strin.split(delim); //seperates data
             
+            //assigns splited data to variables
             hours = Integer.parseInt(tokens[0]);
             wage = Double.parseDouble(tokens[1]);
             
+            //initilizes new employee with data read in
             employee[counter] = new Employee(hours, wage);
             
+            //prints out data from the employee created
             System.out.print(employee[counter].toString());
             
             counter++; //adds one to counter

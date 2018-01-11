@@ -68,7 +68,7 @@
         *     out:        hours (int)
         ********************************************************/
         public int returnHours (){ 
-            return (hours); //returns id
+            return (hours); //returns hours
         } // end returnHours
         
         /********************************************************
@@ -79,7 +79,7 @@
         *     out:        wage (double)
         ********************************************************/
         public double returnWage (){ 
-            return (wage); //returns id
+            return (wage); //returns wage
         } // end returnWage
         
         /********************************************************
