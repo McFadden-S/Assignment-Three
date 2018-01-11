@@ -91,13 +91,20 @@ public class A3Client
         System.out.println("\n***********************************************"
                + "********************************************\n");
         
-        counter--; //removes one from counter to set it too last employee processed
-        
-
+        //prints id for employee number one
+        System.out.println("Employee Number One's ID: " + employee[0].returnEmployeeID());
+        //prints wage of employee two
+        System.out.println("Employee Number Two's Wage: " + employee[1].returnWage());
+        //prints regular pay of employee three
+        System.out.println("Employee Number Three's Regular Pay: " + employee[2].returnRegPay());
+        //prints overtime pay for employee four
+        System.out.println("Employee Number Four's Overtime Pay: " + employee[3].returnOTPay());
+        //prints gross pay of employee five
+        System.out.println("Employee Number Five's Gross Pay: " + employee[4].returnGrossPay());
         
 	// ***** closing message *****
 	
-		System.out.println("end of processing");
+		System.out.println("\nend of processing");
 	
 	}  // end main	
 }  // end class
