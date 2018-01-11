@@ -158,27 +158,6 @@
                     formatter.format(this.returnOTPay()) + "\t\t" +
                     formatter.format(this.returnGrossPay()) + "\n");
             
-            
-            /*
-            //adds spacer/line
-            info += ("\n**********************************\n");
-            //adds the id
-            info += ("Employee Id: " + id + "\n");
-            //adds hours worked
-            info += ("Hours Worked: " + hours + "\n");
-            //adds wage
-            info += ("Wage: " + wage + "\n");
-            //adds regular Pay
-            info += ("Regular Pay" + this.returnRegPay() + "\n");
-            //adds Overtime pay
-            info += ("Overtime Pay: " + this.returnOTPay() + "\n");
-            //adds gross pay
-            info += ("Gross Pay: " + this.returnGrossPay() + "\n");
-            //adds spacer/line
-            info += ("\n**********************************\n");
-            */
-            
-            
             return info; //returns info
         } // end toString
         
