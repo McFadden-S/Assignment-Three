@@ -59,6 +59,10 @@ public class A3Client
 		
 	// ***** Main Body *****
         
+        //prints header for table
+        System.out.println("Employee Id\tHours Worked\tWage\tRegular Pay\t"
+                + "Overtime Pay\tGross Pay");
+                
         strin = fin.readLine(); //reads in new line and primes the loop
         
         while (strin != null){ //start of EoF loop
@@ -69,12 +73,18 @@ public class A3Client
             
             employee[counter] = new Employee(hours, wage);
             
+            System.out.print(employee[counter].toString());
+            
             counter++; //adds one to counter
             strin = fin.readLine(); //reprimes loop with new line
         }//end of EoF loop
+        
+        //adds spacer/line at end of table
+            System.out.println("**********************************\n");
+            
         counter--; //removes one from counter to set it too last employee processed
         
-        
+
         
 	// ***** closing message *****
 	

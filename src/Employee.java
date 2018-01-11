@@ -153,6 +153,16 @@
             
             //adds spacer/line
             info += ("\n**********************************\n");
+            //table info
+            info += (id + "\t" + hours + "\t" + wage + "\t" + 
+                    formatter.format(this.returnRegPay()) + "\t" +
+                    formatter.format(this.returnOTPay()) + "\t" +
+                    formatter.format(this.returnGrossPay()));
+            
+            
+            /*
+            //adds spacer/line
+            info += ("\n**********************************\n");
             //adds the id
             info += ("Employee Id: " + id + "\n");
             //adds hours worked
@@ -167,7 +177,9 @@
             info += ("Gross Pay: " + this.returnGrossPay() + "\n");
             //adds spacer/line
             info += ("\n**********************************\n");
-
+            */
+            
+            
             return info; //returns info
         } // end toString
         
