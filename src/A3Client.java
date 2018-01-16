@@ -20,6 +20,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.*;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 public class A3Client
 {  // begin class
@@ -27,10 +28,11 @@ public class A3Client
 	{  // begin main
             
 	// ***** declaration of constants *****
-            
-            final int EmployeeMAX = 10; //max number for employee array
-            
 	// ***** declaration of variables *****
+            
+            ArrayList<Employee> employee = new ArrayList<>();
+        
+            BufferedReader fin = null;
             
             String strin;  //string for data read in
             String delim = "[ ]+"; //used to seperate data
@@ -38,16 +40,17 @@ public class A3Client
             
             int hours;  //variable for hours worked
             double wage;   //variable for wage
-            int counter = 0; //counts loops, used for addressing array
             
 	// ***** create objects *****
-        
-        Employee[] employee = new Employee[EmployeeMAX]; //creates array of employee objects
-        
 	// ***** create input stream *****
         
+        try{
         //creates reader to read in data
-        BufferedReader fin = new BufferedReader(new FileReader("EmployeeData.txt"));
+        fin = new BufferedReader(new FileReader("EmployeeData.txt"));
+        }//end of try
+        catch (FileNotFoundException e){ //catches if file isnt found
+            System.out.println("file not found");
+        }//end of catch
         
 	// ***** Print Banner *****
 	
@@ -81,29 +84,29 @@ public class A3Client
             wage = Double.parseDouble(tokens[1]);
             
             //initilizes new employee with data read in
-            employee[counter] = new Employee(hours, wage);
-            
-            //prints out data from the employee created
-            System.out.print(employee[counter].toString());
-            
-            counter++; //adds one to counter
+            employee.add(new Employee(hours, wage));
+
             strin = fin.readLine(); //reprimes loop with new line
         }//end of EoF loop
+        
+        //prints out data from the employees created
+        for(Employee i: employee)
+            System.out.println(i);
             
          //adds spacer/line after table
         System.out.println("\n***********************************************"
                + "********************************************\n");
         
         //prints id for employee number one
-        System.out.println("Employee Number One's ID: " + employee[0].returnEmployeeID());
+        System.out.println("Employee Number One's ID: " + employee.get(0).returnEmployeeID());
         //prints wage of employee two
-        System.out.println("Employee Number Two's Wage: " + employee[1].returnWage());
+        System.out.println("Employee Number Two's Wage: " + employee.get(1).returnWage());
         //prints regular pay of employee three
-        System.out.println("Employee Number Three's Regular Pay: " + employee[2].returnRegPay());
+        System.out.println("Employee Number Three's Regular Pay: " + employee.get(2).returnRegPay());
         //prints overtime pay for employee four
-        System.out.println("Employee Number Four's Overtime Pay: " + employee[3].returnOTPay());
+        System.out.println("Employee Number Four's Overtime Pay: " + employee.get(3).returnOTPay());
         //prints gross pay of employee five
-        System.out.println("Employee Number Five's Gross Pay: " + employee[4].returnGrossPay());
+        System.out.println("Employee Number Five's Gross Pay: " + employee.get(4).returnGrossPay());
         
 	// ***** closing message *****
 	
