@@ -31,6 +31,9 @@ public class A3Client
 	// ***** declaration of variables *****
             
             ArrayList<Employee> employee = new ArrayList<>();
+		
+// what's the difference between your line and this
+//ArrayList<Employee> employee = new ArrayList<Employee>();
         
             BufferedReader fin = null;
             
@@ -47,6 +50,7 @@ public class A3Client
         try{
         //creates reader to read in data
         fin = new BufferedReader(new FileReader("EmployeeData.txt"));
+// indent the lines between { and } of the try clause
         }//end of try
         catch (FileNotFoundException e){ //catches if file isnt found
             System.out.println("file not found");
