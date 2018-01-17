@@ -6,6 +6,8 @@
  *
  * Description:	Calculate employee's pay given their hourly wage and amount of
  *              hours worked
+ 
+ very nice! clean and readable. good coupling and cohesion for all methods
  * ************************************************************/
  
  import java.text.DecimalFormat;
